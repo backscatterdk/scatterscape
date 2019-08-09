@@ -2,12 +2,11 @@
 <div id="app">
     <div>
       <form>
-	<input type="text" v-model="number">
+	<input type="number" v-model="number">
       </form>
-      <p> {{ number }} </p>
     </div>
-    <HelloWorld id="first" msg="Welcome to Your Vue.js App"/>
-    <OtherComponent id="second" msg="This is your other component"/>
+    <HelloWorld id="first" :msg="number"/>
+    <OtherComponent id="second" :msg="number"/>
   </div>
 </template>
 
