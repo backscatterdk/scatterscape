@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>{{ count }}</h2>
    </div>
 </template>
 
@@ -9,6 +10,11 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  computed: {
+    count () {
+      return store.state.count
+    }
   }
 }
 </script>
